@@ -1,6 +1,6 @@
 ## Webpack
 
-Help in bundling the files. Since v4 webpack can work w/o a config. In that case it will fallback to the default config. Webpack can't understand JS, so it makes of loaders. Loaders are like transformers. They takes an input and outputs a bundle. In order to work with react and babel we make use of `babel-loader` loader.
+Help in bundling the files. Since v4 webpack can work w/o a config. In that case it will fallback to the default config. Webpack can't understand JS, so it makes of loaders. Loaders are like transformers. They takes an input and outputs a bundle. In order to work with react and babel we make use of `babel-loader` loader. We must tell webpack to produce a HTML page, which has the bundle imported as script. For this we may need two additional components for processing HTML: `html-webpack-plugin` and `html-loader`.
 
 ## Babel
 

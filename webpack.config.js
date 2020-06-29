@@ -1,3 +1,6 @@
+// to work with HTML
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+
 module.exports = {
   module: {
     rules: [
@@ -10,6 +13,20 @@ module.exports = {
           loader: "babel-loader",
         },
       },
+      {
+        test: /\.html$/,
+        use: [
+          {
+            loader: "html-loader",
+          },
+        ],
+      },
     ],
   },
+  plugins: [
+    new HtmlWebPackPlugin({
+      template: "./src/index.html",
+      filename: "./index.html",
+    }),
+  ],
 };
