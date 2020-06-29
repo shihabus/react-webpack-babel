@@ -24,7 +24,9 @@ class Form extends Component {
   render() {
     return (
       <form>
+        <label htmlFor="name">Name </label>
         <input
+          name="name"
           type="text"
           value={this.state.value}
           onChange={this.handleChange}
